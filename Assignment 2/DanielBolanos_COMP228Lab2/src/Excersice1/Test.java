@@ -25,39 +25,44 @@ public class Test {
 
     // Array of correct answers
     int[] correctAnswers = {4, 3, 3, 2, 4};
-    int questionNo =0;
+    boolean wrongInput;
 
-    // Method to simulate the questions and get user's answers
-    public void simulateQuestion() {
+    // Method to ask the user a question, get their answer, and display the final score.
+    public void inputAnswer() {
         int score = 0;
-
-        // Loop through all questions
-        for (int i = 0; questionNo < questions.length; i++, questionNo++) {
-            String message = questions[questionNo] + "\n1) " + answers[questionNo][0] + "\n2) " + answers[questionNo][1] + "\n3) " + answers[questionNo][2] + "\n4) " + answers[questionNo][3];
-            String userAnswer = inputAnswer(message);
-            boolean match = checkAnswer(userAnswer);
+        for (int i = 0; i < questions.length; i++) {
+            wrongInput = false;
+            String userAnswer = simulateQuestion(i);
+            boolean match = checkAnswer(userAnswer, i);
+            if(wrongInput) {
+            i--;
+            }
             if (match) {
                 score++;
             }
             generateMessage(match);
         }
-
         JOptionPane.showMessageDialog(null, "Your final score is: " + score + "/" + questions.length);
+
     }
 
-    // Method to ask the user a question and get their input
-    public String inputAnswer(String message) {
-        String input = JOptionPane.showInputDialog(null,message, "Question " + (questionNo + 1), JOptionPane.QUESTION_MESSAGE);
-        return input;
+    // Method to simulate the questions
+    public String simulateQuestion(int questionNumber) {
+        String message = questions[questionNumber] + "\n1) " + answers[questionNumber][0] + "\n2) " + answers[questionNumber][1] + "\n3) " + answers[questionNumber][2] + "\n4) " + answers[questionNumber][3];
+        String userAnswer = JOptionPane.showInputDialog(null,message, "Question " + (questionNumber + 1), JOptionPane.QUESTION_MESSAGE);
+        return userAnswer;
     }
+
+
 
     // Method to check if the user's answer is correct
-    public boolean checkAnswer( String answer) {
+    public boolean checkAnswer( String answer, int questionNumber) {
         try {
             int userAnswer = Integer.parseInt(answer);
-            return userAnswer == correctAnswers[questionNo];
+            return userAnswer == correctAnswers[questionNumber];
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Invalid input! Please enter a number between 1 and 4.");
+            wrongInput = true;
             return false;
         }
     }
@@ -65,13 +70,40 @@ public class Test {
     // Method to generate a random message based on whether the answer is correct or not
     public void generateMessage(boolean isCorrect) {
         Random random = new Random();
-        String[] correctMessages = {"Good job!", "Correct!", "Well done!", "That's right!"};
-        String[] incorrectMessages = {"Oops! Wrong answer.", "Try again next time.", "Incorrect!", "Better luck next time!"};
-
         if (isCorrect) {
-            JOptionPane.showMessageDialog(null, correctMessages[random.nextInt(correctMessages.length)]);
+            switch (random.nextInt(4)) {
+                case 1:
+                    JOptionPane.showMessageDialog(null, "Excellent!");
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null, "Good!");
+                    break;
+                case 3:
+                    JOptionPane.showMessageDialog(null, "Keep up the good work!");
+                    break;
+                case 4:
+                    JOptionPane.showMessageDialog(null, "Nice work!");
+                    break;
+                default:
+                    break;
+            }
         } else {
-            JOptionPane.showMessageDialog(null,incorrectMessages[random.nextInt(incorrectMessages.length)]);
+            switch (random.nextInt(3)) {
+                case 1:
+                    JOptionPane.showMessageDialog(null, "No. Please try again");
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null, "Wrong. Try once more");
+                    break;
+                case 3:
+                    JOptionPane.showMessageDialog(null, "Don't give up!");
+                    break;
+                case 4:
+                    JOptionPane.showMessageDialog(null, "No. Keep trying..");
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
