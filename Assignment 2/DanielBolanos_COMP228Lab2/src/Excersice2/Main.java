@@ -1,20 +1,13 @@
-import Excersice1.Test;
-import Excersice2.Lotto;
+package Excersice2;
+
 import javax.swing.JOptionPane;
 
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // to see how IntelliJ IDEA suggests fixing it.
-        //Test test = new Test();
-        //test.inputAnswer();
-
         Lotto lotto = new Lotto();
         int sum =0;
         boolean won = true;
-        String messageInput = "Enter how many is the sum of the lotto";
+        String messageInput = "Guess how much is the sum of the lotto";
 
         for(int i=0;i<=5;i++){
             if(i>0){
@@ -22,7 +15,7 @@ public class Main {
             }
             int[] lotoNumbers = lotto.getLotto();
             for (int j : lotoNumbers) {
-                sum += lotoNumbers[j];
+                sum += j;
             }
             try{
                 int userAnswer = Integer.parseInt(JOptionPane.showInputDialog(null,messageInput, "Sum of the lotto ", JOptionPane.QUESTION_MESSAGE));
@@ -35,7 +28,8 @@ public class Main {
                         won = false;
                         break;
                     }else{
-                        JOptionPane.showMessageDialog(null, "Sorry. Bad luck. The sum of the lotto is" + sum + "Please try again.");
+                        JOptionPane.showMessageDialog(null, "Sorry. Bad luck. The sum of the lotto is " + sum + ". Please try again.");
+                        sum =0;
                     }
                 }
             }catch(NumberFormatException e){
