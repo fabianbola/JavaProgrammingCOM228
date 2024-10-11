@@ -12,7 +12,6 @@ public abstract class Insurance extends Object{
         return monthlyCost;
     }
 
-    public abstract void setInsuranceCost();
-    public abstract void displayInfo();
-
+    public abstract double setInsuranceCost(double monthlyCost);
+    public abstract String displayInfo();
 }

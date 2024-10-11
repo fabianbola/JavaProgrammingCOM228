@@ -2,79 +2,89 @@ package Excersice1;
 
 public class Life extends Insurance{
 
+    private int insuraNo;
     private int ID;
     private String name;
     private int age;
-    private String gender;
-    private String haveCouple;
-    private boolean haveChildren;
+    private char gender;
+    private char haveCouple;
+    private char haveChildren;
 
-    public int getID() {
-        return ID;
-    }
-    public void setID(int ID) {
-        this.ID = ID;
-    }
     public void setName(String name){
         this.name = name;
     }
     public void setAge(int age){
         this.age = age;
     }
-    public void setGender(String gender){
+    public void setGender(char gender){
         this.gender = gender;
     }
-    public void setHaveCouple(String haveCouple){
+    public void setHaveCouple(char haveCouple){
         this.haveCouple = haveCouple;
     }
-    public void setHaveChildren(boolean haveChildren){
+    public void setHaveChildren(char haveChildren){
         this.haveChildren = haveChildren;
     }
-    public void typeInsurance(String typeInsurance){
-        this.typeInsurance = typeInsurance;
-    }
-    public void monthlyCost (double monthlyCost){
-        this.monthlyCost = monthlyCost;
-    }
 
+    public int getInsuraNo(){return insuraNo;}
+    public int getID() {
+        return ID;
+    }
+    public String getName() {return name;}
+    public int getAge() {return age;}
+    public char getGender() {return gender;}
+    public char getHaveCouple() {return haveCouple;}
+    public char getHaveChildren() {return haveChildren;}
 
-    public int getAge() {
-        return age;
-    }
-    public String getGender() {
-        return gender;
-    }
-    public String getHaveCouple() {
-        return haveCouple;
-    }
-    public boolean isHaveChildren() {
-        return haveChildren;
-    }
-    public String typeInsurance(){
-        return typeInsurance;
-    }
-    public double monthlyCost(){
+    public Life(int insuraNo, int ID, String name, int age, char gender, char haveCouple, char haveChildren, double monthlyCost) {
+        super.typeInsurance = "Life";
+        this.insuraNo = insuraNo;
+        this.ID = ID;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.haveCouple = haveCouple;
+        this.haveChildren = haveChildren;
+        super.monthlyCost = setInsuranceCost(monthlyCost);
+        }
+
+    @Override
+    public double setInsuranceCost(double monthlyCost) {
+        if(getAge()>30 && getAge()<50){
+            monthlyCost += (monthlyCost * 0.1);
+        } else if (getAge()>50){
+            monthlyCost += (monthlyCost * 0.2);
+        }
+        if(getGender()=='M' || getGender()=='m'){
+            monthlyCost += (monthlyCost * 0.1);
+        }else{
+            monthlyCost += (monthlyCost * 0.05);
+        }
+        if(getHaveCouple()=='Y' || getHaveCouple()=='y'){
+            monthlyCost += (monthlyCost * 0.1);
+        }
+        if(getHaveChildren()=='Y' || getHaveChildren()=='y'){
+            monthlyCost += (monthlyCost * 0.1);
+        }
         return monthlyCost;
     }
 
 
-
-    public Life(int ID, String name, int age, String gender, String haveCouple, String typeInsurance, double monthlyCost){
-
-    }
-
     @Override
-    public void setInsuranceCost() {
-
-    }
-
-    @Override
-    public void displayInfo() {
-
+    public String displayInfo() {
+        String message = String.format(
+                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f",
+                getInsuraNo(), super.typeInsurance, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
+        );
+        return message;
     }
 
     @Override
     public String toString(){
-        return "";
+        String message = String.format(
+                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f",
+                getInsuraNo(), super.typeInsurance, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
+        );
+        return message;
     }
 }
