@@ -40,14 +40,15 @@ public class Health extends Insurance{
     }
 
     public Health(int insuraNo, int ID, String name, int age, char gender, char PreExistence, double monthlyCost){
-        super.typeInsurance = "Health";
+        super("Health");
         this.insuraNo = insuraNo;
         this.ID = ID;
         this.Name = name;
         this.age = age;
         this.gender = gender;
         this.PreExistence = PreExistence;
-        this.monthlyCost = setInsuranceCost(monthlyCost);
+        setMonthlyCost(setInsuranceCost(monthlyCost));
+        //this.monthlyCost = setInsuranceCost(monthlyCost);
     }
 
     @Override
@@ -70,8 +71,8 @@ public class Health extends Insurance{
     @Override
     public String displayInfo() {
         String message = String.format(
-                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %2f",
-                getInsuraNo(), super.typeInsurance, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
+                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
+                getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
         );
         return message;
     }
@@ -79,8 +80,8 @@ public class Health extends Insurance{
     @Override
     public String toString(){
         String message = String.format(
-                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %2f",
-                getInsuraNo(), super.typeInsurance, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
+                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
+                getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
         );
         return message;
     }

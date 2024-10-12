@@ -8,18 +8,18 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Insurance> insurances = new ArrayList<Insurance>();
-        int insuraNo=0;
-        int ID=0;
-        String name="";
-        int age=0;
-        char gender=' ';
-        char haveCouple=' ';
-        char haveChildren=' ';
+        int insuraNo = 0;
+        int ID = 0;
+        String name = "";
+        int age = 0;
+        char gender = ' ';
+        char haveCouple = ' ';
+        char haveChildren = ' ';
         char PreExistence = ' ';
         String insuranceType = "";
-        double monthlyFee=0.0;
+        double monthlyFee = 0.0;
 
-        String input ="";
+        String input = "";
         boolean flag = true;
 
         do{
@@ -144,8 +144,9 @@ public class Main {
                 }
                 Health insurance = new Health(insuraNo,ID,name,age,gender,PreExistence,monthlyFee);
                 insurances.add(insurance);
-
+                insuraNo++;
             }
+
             flag = true;
             while(flag){
                 try{
@@ -159,10 +160,17 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "The data prompt is not valid.");
                 }
             }
+
             flag = true;
             if (input.equalsIgnoreCase("N")) {
                 flag = false;
             }
         }while(flag);
+
+        for (Insurance insurance : insurances) {
+            System.out.println(insurance.displayInfo());
+        }
+
+
     }
 }

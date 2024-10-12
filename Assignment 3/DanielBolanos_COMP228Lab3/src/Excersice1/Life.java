@@ -37,7 +37,7 @@ public class Life extends Insurance{
     public char getHaveChildren() {return haveChildren;}
 
     public Life(int insuraNo, int ID, String name, int age, char gender, char haveCouple, char haveChildren, double monthlyCost) {
-        super.typeInsurance = "Life";
+        super("Life");
         this.insuraNo = insuraNo;
         this.ID = ID;
         this.name = name;
@@ -45,7 +45,7 @@ public class Life extends Insurance{
         this.gender = gender;
         this.haveCouple = haveCouple;
         this.haveChildren = haveChildren;
-        super.monthlyCost = setInsuranceCost(monthlyCost);
+        setMonthlyCost(setInsuranceCost(monthlyCost));
         }
 
     @Override
@@ -73,8 +73,8 @@ public class Life extends Insurance{
     @Override
     public String displayInfo() {
         String message = String.format(
-                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f",
-                getInsuraNo(), super.typeInsurance, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
+                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
+                getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
         );
         return message;
     }
@@ -82,8 +82,8 @@ public class Life extends Insurance{
     @Override
     public String toString(){
         String message = String.format(
-                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f",
-                getInsuraNo(), super.typeInsurance, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
+                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
+                getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
         );
         return message;
     }
