@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Lotto {
     Random random = new Random();
-    int[] loto = new int[3];
+    private int[] loto = new int[3];
 
     public Lotto() {
         for(int i=0;i<3;i++){
