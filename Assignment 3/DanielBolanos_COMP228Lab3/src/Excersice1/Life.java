@@ -10,9 +10,9 @@ public class Life extends Insurance{
     private char haveCouple;
     private char haveChildren;
 
-    public void setName(String name){
-        this.name = name;
-    }
+    private void setInsuraNo(int insuraNo) {this.insuraNo = insuraNo;}
+    private void setID(int ID) {this.ID = ID;}
+    public void setName (String name){this.name = name;}
     public void setAge(int age){
         this.age = age;
     }
@@ -38,13 +38,13 @@ public class Life extends Insurance{
 
     public Life(int insuraNo, int ID, String name, int age, char gender, char haveCouple, char haveChildren, double monthlyCost) {
         super("Life");
-        this.insuraNo = insuraNo;
-        this.ID = ID;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.haveCouple = haveCouple;
-        this.haveChildren = haveChildren;
+        setInsuraNo(insuraNo);
+        setID(ID);
+        setName(name);
+        setAge(age);
+        setGender(gender);
+        setHaveCouple(haveCouple);
+        setHaveChildren(haveChildren);
         setMonthlyCost(setInsuranceCost(monthlyCost));
         }
 
@@ -73,7 +73,7 @@ public class Life extends Insurance{
     @Override
     public String displayInfo() {
         String message = String.format(
-                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
+                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %.2f--------------------------------------------------------%n%n",
                 getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
         );
         return message;
@@ -82,7 +82,7 @@ public class Life extends Insurance{
     @Override
     public String toString(){
         String message = String.format(
-                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
+                "The insurance No %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have a couple: %c%n - Have children: %c%n%n TOTAL MONTHLY FEE %.2f--------------------------------------------------------%n%n",
                 getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getHaveCouple(), getHaveChildren(), super.monthlyCost
         );
         return message;
