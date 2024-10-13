@@ -169,7 +169,7 @@ public class Main {
         }while(flag);
 
         for (Insurance insurance : insurances) {
-            System.out.println(insurance.displayInfo());
+            JOptionPane.showMessageDialog(null, insurance.displayInfo(), "Game tester details", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 }

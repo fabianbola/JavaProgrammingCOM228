@@ -59,7 +59,7 @@ public class Main {
                 }
             }
             FullTimeGameTester FullTimeGameTester = new FullTimeGameTester(name,status,isBoss);
-            System.out.println(FullTimeGameTester);
+            JOptionPane.showMessageDialog(null, FullTimeGameTester, "Game tester details", JOptionPane.INFORMATION_MESSAGE);
 
         }else {
             flag = true;
@@ -72,7 +72,8 @@ public class Main {
                 }
             }
             PartTimeGameTester PartTimeGameTester = new PartTimeGameTester(name,status,workWeeklyHours);
-            System.out.println(PartTimeGameTester);
+            JOptionPane.showMessageDialog(null, PartTimeGameTester, "Game tester details", JOptionPane.INFORMATION_MESSAGE);
+
         }
     }
 }
