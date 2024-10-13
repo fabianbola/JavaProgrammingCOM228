@@ -72,7 +72,7 @@ public class Health extends Insurance{
     @Override
     public String displayInfo() {
         String message = String.format(
-                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %.2f--------------------------------------------------------%n%n",
+                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %.2f",
                 getInsuraceNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
         );
         return message;
@@ -81,7 +81,7 @@ public class Health extends Insurance{
     @Override
     public String toString(){
         String message = String.format(
-                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %.2f--------------------------------------------------------%n%n",
+                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %.2f",
                 getInsuraceNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
         );
         return message;
