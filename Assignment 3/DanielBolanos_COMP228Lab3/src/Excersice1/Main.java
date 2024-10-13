@@ -7,7 +7,8 @@ import javax.swing.JOptionPane;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Insurance> insurances = new ArrayList<Insurance>();
+        ArrayList<
+                Insurance> insurances = new ArrayList<Insurance>();
         int insuraNo = 0;
         int ID = 0;
         String name = "";
@@ -170,7 +171,5 @@ public class Main {
         for (Insurance insurance : insurances) {
             System.out.println(insurance.displayInfo());
         }
-
-
     }
 }
