@@ -25,7 +25,7 @@ public class PartTimeGameTester extends GameTester {
     @Override
     public String toString() {
         String message = String.format(
-                "%s, work  %d hours weekly and your weekly salary is %2f",
+                "%s, work  %d hours weekly and your weekly salary is %.2f",
                 super.toString(),getworkWeeklyHours(), defineSalary());
         return message;
     }

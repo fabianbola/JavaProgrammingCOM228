@@ -2,13 +2,15 @@ package Excersice1;
 
 public class Health extends Insurance{
 
-    private int insuraNo;
+    private int insuraceNo;
     private int ID;
     private String Name;
     private int age;
     private char gender;
     private char PreExistence;
 
+    private void setInsuraceNo(int insuraNo) {this.insuraceNo = insuraNo;}
+    private void setID(int ID) {this.ID = ID;}
     public void setName(String Name) {
         this.Name = Name;
     }
@@ -22,7 +24,7 @@ public class Health extends Insurance{
         this.PreExistence = PreExistence;
     }
 
-    public  int getInsuraNo() {return insuraNo;}
+    public int getInsuraceNo() {return insuraceNo;}
     public int getID() {
         return ID;
     }
@@ -39,16 +41,15 @@ public class Health extends Insurance{
         return PreExistence;
     }
 
-    public Health(int insuraNo, int ID, String name, int age, char gender, char PreExistence, double monthlyCost){
+    public Health(int insuranceNo, int ID, String name, int age, char gender, char PreExistence, double monthlyCost){
         super("Health");
-        this.insuraNo = insuraNo;
-        this.ID = ID;
-        this.Name = name;
-        this.age = age;
-        this.gender = gender;
-        this.PreExistence = PreExistence;
+        setInsuraceNo(insuranceNo);
+        setID(ID);
+        setName(name);
+        setAge(age);
+        setGender(gender);
+        setPreExistence(PreExistence);
         setMonthlyCost(setInsuranceCost(monthlyCost));
-        //this.monthlyCost = setInsuranceCost(monthlyCost);
     }
 
     @Override
@@ -71,8 +72,8 @@ public class Health extends Insurance{
     @Override
     public String displayInfo() {
         String message = String.format(
-                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
-                getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
+                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %.2f--------------------------------------------------------%n%n",
+                getInsuraceNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
         );
         return message;
     }
@@ -80,8 +81,8 @@ public class Health extends Insurance{
     @Override
     public String toString(){
         String message = String.format(
-                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %2f--------------------------------------------------------%n%n",
-                getInsuraNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
+                "The insurance No. %d type %s was issued to %s with ID %d%n - Age: %d%n - Gender: %c%n - Have pre-existence illness: %c%n%n TOTAL MONTHLY FEE %.2f--------------------------------------------------------%n%n",
+                getInsuraceNo(), super.insuranceType, getName(), getID(), getAge(), getGender(), getPreExistence(), super.monthlyCost
         );
         return message;
     }

@@ -24,7 +24,7 @@ public class FullTimeGameTester extends GameTester{
     @Override
     public String toString() {
         String message = String.format(
-                "%s is boss %c and your weekly salary is %2f",
+                "%s is boss %c and your weekly salary is %.2f",
                 super.toString(),getisBoss(), defineSalary());
         return message;
     }

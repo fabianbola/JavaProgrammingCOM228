@@ -4,7 +4,7 @@ public abstract class GameTester {
     private String name;
     private boolean status;
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
