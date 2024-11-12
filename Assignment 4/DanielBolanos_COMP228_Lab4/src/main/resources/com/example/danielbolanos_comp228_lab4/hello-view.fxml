@@ -10,8 +10,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.ListView?>
-
-
+<?import javafx.scene.control.TextArea?>
 
 
 <GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
@@ -55,27 +54,23 @@
     <TextField fx:id="postalCodeTB" promptText="Postal Code" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
     <TextField fx:id="phoneNumberTB" promptText="Phone Number" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
     <TextField fx:id="emailTB" promptText="Email" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
-    <TextField fx:id="Result"
-               GridPane.rowIndex="9" GridPane.columnIndex="0"
-               GridPane.columnSpan="5" GridPane.vgrow="ALWAYS"
-               editable="false" disable="true" prefHeight="80"/>
-
 
     <ListView fx:id="CoursesSelected"
               GridPane.rowIndex="2" GridPane.rowSpan="3"
               GridPane.columnIndex="3" GridPane.columnSpan="6"
               GridPane.vgrow="ALWAYS"
-              prefHeight="200" prefWidth="150"
-    />
-    <!-- onMouseClicked="#getBackCourse" -->
+              prefHeight="200" prefWidth="150"/>
 
+
+    <TextArea fx:id="Result"
+              GridPane.rowIndex="9" GridPane.columnIndex="0"
+              GridPane.columnSpan="5" GridPane.vgrow="ALWAYS"
+              editable="false" prefHeight="80"/>
 
     <!-- Radio Buttons for Options -->
-    <!-- <RadioButton fx:id="computerScienceRB" text="Computer Science" GridPane.rowIndex="0" GridPane.columnIndex="3" onAction="#changeLanguage">-->
-
     <RadioButton fx:id="computerScienceRB" text="Computer Science" GridPane.rowIndex="0" GridPane.columnIndex="3">
         <toggleGroup>
-            <ToggleGroup fx:id="radioGroup"/>
+            <ToggleGroup/>
         </toggleGroup>
     </RadioButton>
 
@@ -84,12 +79,12 @@
  -->
     <RadioButton fx:id="businessRB" text="Business" GridPane.rowIndex="0" GridPane.columnIndex="4">
         <toggleGroup>
-            <ToggleGroup fx:id="radioGroup1"/>
+            <ToggleGroup/>
         </toggleGroup>
     </RadioButton>
 
     <!-- inputs CheckBox -->
-    <CheckBox fx:id="studentCounculCHB" text="Student Council" GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
+    <CheckBox fx:id="studentCouncilCHB" text="Student Council" GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
     <CheckBox fx:id="volunteerWorkCHB" text="Volunteer Work" GridPane.rowIndex="5" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
 
 
@@ -103,7 +98,7 @@
 
     <!-- Submit Button -->
     <Button fx:id="submitButton" text="Submit" GridPane.rowIndex="8" GridPane.columnIndex="1"
-            GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+            GridPane.columnSpan="2" GridPane.halignment="CENTER" onAction="#onSubmitButtonClick" />
 
 
 
