@@ -1,10 +1,11 @@
-package com.example.danielbolanos_comp228_lab4;
+package com.example.danielbolanos_comp228lab4;
 
-import javafx.collections.FXCollections;
+import javafx.scene.control.Alert;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.application.Platform;
-
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
 
 
@@ -101,23 +102,40 @@ public class HelloController {
         for (String item : CoursesSelected.getItems()) {
             combinedText.append("- ").append(item).append("\n");
         }
-        Result.setText(combinedText.toString());
 
-        nameTB.setText("");
-        addressTB.setText("");
-        providenceTB.setText("");
-        cityTB.setText("");
-        postalCodeTB.setText("");
-        phoneNumberTB.setText("");
-        emailTB.setText("");
-        studentCouncilCHB.setSelected(false);
-        volunteerWorkCHB.setSelected(false);
-        computerScienceRB.setSelected(false);
-        businessRB.setSelected(false);
-        codeCoursesComboBox.getItems().clear();
-        CoursesSelected.setDisable(true);
+        if(nameTB.getText()=="" || addressTB.getText()=="" || providenceTB.getText()=="" || cityTB.getText()=="" || postalCodeTB.getText()=="" || phoneNumberTB.getText() =="" || emailTB.getText()==""){
 
+            showAlert("Empty fields","The fields with * are mandatory");
+
+        } else if(CoursesSelected.getItems().isEmpty()){
+
+            showAlert("Courses no chosen","There is not courses selected\nSelect a program and choose a course to take");
+
+        }else {
+
+            Result.setText(combinedText.toString());
+
+            nameTB.setText("");
+            addressTB.setText("");
+            providenceTB.setText("");
+            cityTB.setText("");
+            postalCodeTB.setText("");
+            phoneNumberTB.setText("");
+            emailTB.setText("");
+            studentCouncilCHB.setSelected(false);
+            volunteerWorkCHB.setSelected(false);
+            computerScienceRB.setSelected(false);
+            businessRB.setSelected(false);
+            codeCoursesComboBox.getItems().clear();
+            CoursesSelected.setDisable(true);
+        }
     }
 
-
+    // Utility method to show alert dialog
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
 }

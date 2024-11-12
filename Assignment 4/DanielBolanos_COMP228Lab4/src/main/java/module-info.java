@@ -1,4 +1,4 @@
-module com.example.danielbolanos_comp228_lab4 {
+module com.example.danielbolanos_comp228lab4 {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,6 +11,6 @@ module com.example.danielbolanos_comp228_lab4 {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens com.example.danielbolanos_comp228_lab4 to javafx.fxml;
-    exports com.example.danielbolanos_comp228_lab4;
+    opens com.example.danielbolanos_comp228lab4 to javafx.fxml;
+    exports com.example.danielbolanos_comp228lab4;
 }

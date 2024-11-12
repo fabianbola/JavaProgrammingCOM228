@@ -4,30 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f418bac-4d38-4b80-89f7-568ad1126f11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="a136c46a-9a8d-4dfd-875d-d2ffa2aaf9b9" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/danielbolanos_comp228lab4/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DanielBolanosCOMP228_SEC006/DanielBolanosCOMP228_SEC006.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DanielBolanosCOMP228_SEC006/src/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DanielBolanosCOMP228_SEC006/src/ChildrenBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DanielBolanosCOMP228_SEC006/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DanielBolanosCOMP228_SEC006/src/ScienceBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 3/DanielBolanos_COMP228Lab3/src/Excersice3/Mortgage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 3/DanielBolanos_COMP228Lab3/src/Excersice3/Mortgage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -39,23 +26,21 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2ofxbNfVmZ90vMWw55TzRJEnnNk" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2ol54LyYE0yRAZNMIoIfFL94Ztd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Assignment4",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -76,18 +61,27 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8f418bac-4d38-4b80-89f7-568ad1126f11" name="Changes" comment="" />
-      <created>1731274503090</created>
+      <changelist id="a136c46a-9a8d-4dfd-875d-d2ffa2aaf9b9" name="Changes" comment="" />
+      <created>1731431129712</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1731274503090</updated>
-      <workItem from="1731274504149" duration="18020000" />
-      <workItem from="1731350554358" duration="11064000" />
-      <workItem from="1731362205232" duration="1377000" />
+      <updated>1731431129712</updated>
+      <workItem from="1731431130754" duration="1703000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/danielbolanos_comp228lab4/HelloController.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
