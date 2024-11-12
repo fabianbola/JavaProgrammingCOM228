@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.ListView;
+import javafx.application.Platform;
+
 
 
 
@@ -32,6 +34,7 @@ public class HelloController {
         businessRB.setToggleGroup(group);
         group.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == computerScienceRB) {
+
                 // Opciones para Computer Science
                 codeCoursesComboBox.getItems().setAll("Java", "Python", "C++");
             } else if (newValue == businessRB) {
@@ -41,31 +44,38 @@ public class HelloController {
             CoursesSelected.getItems().clear();
 
         });
+        /*
         codeCoursesComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 CoursesSelected.getItems().add(newValue);
-                //codeCoursesComboBox.getItems().remove(newValue);
+            }
+            int index = codeCoursesComboBox.getItems().indexOf(newValue);
+            if (index >= 0 ) {
+                codeCoursesComboBox.getItems().remove(index);
+            }
+        });
+        */
+
+        codeCoursesComboBox.setOnAction(event -> {
+            String selectedCourse = codeCoursesComboBox.getSelectionModel().getSelectedItem();
+            if (selectedCourse != null) {
+                CoursesSelected.getItems().add(selectedCourse);
+                Platform.runLater(() -> codeCoursesComboBox.getItems().remove(selectedCourse));
+            }
+        });
+
+
+        CoursesSelected.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                String selectedCourse = CoursesSelected.getSelectionModel().getSelectedItem();
+                if (selectedCourse != null) {
+                    codeCoursesComboBox.getItems().add(selectedCourse);
+                    CoursesSelected.getItems().remove(selectedCourse);
+                }
             }
         });
     }
 /*
-    @FXML
-    private void includeCourses() {
-        String selectedCourse = codeCoursesComboBox.getValue();
-        if (selectedCourse != null && !selectedCourse.isEmpty()) {
-            CoursesSelected.getItems().add(codeCoursesComboBox.getValue());
-        }
-        int selectedIndex = codeCoursesComboBox.getSelectionModel().getSelectedIndex();
-        if (selectedIndex >= 0 && selectedIndex < codeCoursesComboBox.getItems().size()) {
-            codeCoursesComboBox.getItems().remove(selectedIndex);
-        }
-    }
-
-    @FXML
-    private void changeLanguage() {
-        CoursesSelected.getItems().clear();
-
-    }
 
 
     @FXML
