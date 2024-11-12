@@ -7,6 +7,7 @@ import javafx.application.Platform;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
+import java.lang.reflect.Array;
 
 
 public class HelloController {
@@ -34,6 +35,7 @@ public class HelloController {
         businessRB.setToggleGroup(group);
         group.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == computerScienceRB) {
+
                 codeCoursesComboBox.getItems().setAll(
                         "Java", "Python", "C++", "JavaScript", "Ruby", "Swift", "Kotlin",
                         "PHP", "R", "Go", "TypeScript", "SQL", "Rust", "Perl"
@@ -48,13 +50,22 @@ public class HelloController {
 
         });
 
+
         codeCoursesComboBox.setOnAction(event -> {
+            String selectedCourse = codeCoursesComboBox.getSelectionModel().getSelectedItem();
+            if (!CoursesSelected.getItems().contains(selectedCourse)) {
+                CoursesSelected.getItems().add(selectedCourse);
+            }
+        });
+
+
+        /*codeCoursesComboBox.setOnAction(event -> {
             String selectedCourse = codeCoursesComboBox.getSelectionModel().getSelectedItem();
             if (selectedCourse != null) {
                 CoursesSelected.getItems().add(selectedCourse);
-                Platform.runLater(() -> codeCoursesComboBox.getItems().remove(selectedCourse));
+                //Platform.runLater(() -> codeCoursesComboBox.getItems().remove(selectedCourse));
             }
-        });
+        });*/
 
 
         CoursesSelected.setOnMouseClicked(event -> {
