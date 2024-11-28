@@ -28,7 +28,6 @@
 
 
     <!-- Message Label -->
-    <!-- Message Labels -->
     <Label fx:id="nameLabel" text="Name*:" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
            wrapText="true" style=" -fx-padding: 10;" />
     <Label fx:id="addressLabel" text="Address*:" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2"
