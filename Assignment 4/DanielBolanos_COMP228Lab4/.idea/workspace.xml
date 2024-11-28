@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a136c46a-9a8d-4dfd-875d-d2ffa2aaf9b9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/com/example/danielbolanos_comp228lab5/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/com/example/danielbolanos_comp228lab5/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/com/example/danielbolanos_comp228lab5/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/com/example/danielbolanos_comp228lab5/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/resources/com/example/danielbolanos_comp228lab5/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/resources/com/example/danielbolanos_comp228lab5/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -11,6 +11,7 @@ module com.example.danielbolanos_comp228lab5 {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires java.desktop;
 
 
     opens com.example.danielbolanos_comp228lab5 to javafx.fxml;

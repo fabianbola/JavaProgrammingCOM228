@@ -72,15 +72,15 @@
 
   <!-- Submit Button -->
   <Button fx:id="Buttonsubmit" text="Submit" GridPane.rowIndex="8" GridPane.columnIndex="1"
-          GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+          GridPane.columnSpan="2" GridPane.halignment="CENTER" onAction="#onSubmitButtonClick"/>
 
   <!-- Submit Button -->
   <Button fx:id="ButtonConsult" text="Consult" GridPane.rowIndex="8" GridPane.columnIndex="2"
-          GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+          GridPane.columnSpan="2" GridPane.halignment="CENTER" />
 
   <!-- Submit Button -->
   <Button fx:id="ButtonEdit" text="Edit" GridPane.rowIndex="8" GridPane.columnIndex="4"
-          GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+          GridPane.columnSpan="2" GridPane.halignment="CENTER" />
 
 
   <ListView fx:id="GameList"

@@ -34,7 +34,7 @@ public class HelloApplication extends Application {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             connection = DriverManager.getConnection(
                     "jdbc:oracle:thin:@199.212.26.208:1521:SQLD",
-                    " COMP228_F24_sy_124",
+                    "COMP228_F24_soh_3",
                     "password"
             );
         } catch (Exception e){
