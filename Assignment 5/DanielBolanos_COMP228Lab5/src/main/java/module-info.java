@@ -10,6 +10,8 @@ module com.example.danielbolanos_comp228lab5 {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
+
 
     opens com.example.danielbolanos_comp228lab5 to javafx.fxml;
     exports com.example.danielbolanos_comp228lab5;

@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a136c46a-9a8d-4dfd-875d-d2ffa2aaf9b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/danielbolanos_comp228lab4/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/danielbolanos_comp228lab4/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/com/example/danielbolanos_comp228lab5/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/com/example/danielbolanos_comp228lab5/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 5/DanielBolanos_COMP228Lab5/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Assignment-5",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Fabian Bolanos/OneDrive/GitHub/JavaProgrammingCOM228/Assignment 5/FabianBolanos_COMP228Lab5",
+    "last_opened_file_path": "C:/Users/Fabian Bolanos/OneDrive/GitHub/JavaProgrammingCOM228/Assignment 5/DanielBolanos_COMP228Lab5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
