@@ -13,10 +13,10 @@
 
 <?import javafx.scene.layout.ColumnConstraints?>
 <GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-          fx:controller="com.example.danielbolanos_comp228lab5.HelloController"
+          fx:controller="com.example.fabianbolanos_comp228lab5.HelloController"
           alignment="CENTER" style="-fx-padding: 20;">
 
-    <!-- Set Column Constraints -->
+  <!-- Set Column Constraints -->
   <columnConstraints>
     <ColumnConstraints percentWidth="18"/>
     <ColumnConstraints percentWidth="32"/>
@@ -69,16 +69,16 @@
 
   <TextField fx:id="TextGameID" promptText="Game ID" GridPane.rowIndex="1" GridPane.columnIndex="4"/>
   <TextField fx:id="TextGameTitle" promptText="Game title" GridPane.rowIndex="2" GridPane.columnIndex="4"/>
-  <DatePicker fx:id="TextDate" promptText="Date" GridPane.rowIndex="3" GridPane.columnIndex="4"/>
+  <DatePicker fx:id="Date" promptText="Date" GridPane.rowIndex="3" GridPane.columnIndex="4"/>
   <TextField fx:id="TextScore" promptText="Score" GridPane.rowIndex="4" GridPane.columnIndex="4"/>
 
   <!-- Submit Button -->
-  <Button fx:id="Buttonsubmit" text="Submit" GridPane.rowIndex="8" GridPane.columnIndex="1"
+  <Button fx:id="Buttonsubmit" text="Create Gamer" GridPane.rowIndex="8" GridPane.columnIndex="1"
           GridPane.columnSpan="2" GridPane.halignment="CENTER" onAction="#onSubmitButtonClick"/>
 
   <!-- Submit Button -->
   <Button fx:id="ButtonConsult" text="Consult" GridPane.rowIndex="8" GridPane.columnIndex="2"
-          GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+          GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
 
   <!-- Submit Button -->
   <Button fx:id="ButtonEdit" text="Edit" GridPane.rowIndex="8" GridPane.columnIndex="4"

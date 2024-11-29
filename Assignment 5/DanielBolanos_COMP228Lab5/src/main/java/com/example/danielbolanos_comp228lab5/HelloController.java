@@ -47,14 +47,12 @@ public class HelloController {
                 ResultSet resultSet = queryConsult.executeQuery();
 
                 if (resultSet.next()) {
-                    // Si ya existe, mostrar un mensaje de alerta
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Error");
                     alert.setHeaderText("Player ID already exists");
                     alert.setContentText("A player with this ID already exists in the database.");
                     alert.showAndWait();
                 } else {
-                    // Si no existe, insertar el nuevo registro
                     String insertQuery = "INSERT INTO FABIAN_BOLANOS_PLAYER (PLAYER_ID, FIRST_NAME, LAST_NAME, ADDRESS, POSTAL_CODE, PROVIDENCE, PHONE_NUMBER, GAME_ID, GAME_TITLE, SCORE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                     try (PreparedStatement insertStmt = connection.prepareStatement(insertQuery)) {
                         insertStmt.setString(1, PlayerID);

@@ -1,4 +1,4 @@
-package com.example.danielbolanos_comp228lab5;
+package com.example.fabianbolanos_comp228lab5;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
