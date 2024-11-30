@@ -1,4 +1,4 @@
-module com.example.danielbolanos_comp228lab5 {
+module com.example.fabianbolanoscom228_lab5 {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -14,6 +14,6 @@ module com.example.danielbolanos_comp228lab5 {
     requires java.desktop;
 
 
-    opens com.example.fabianbolanos_comp228lab5 to javafx.fxml;
-    exports com.example.fabianbolanos_comp228lab5;
+    opens com.example.fabianbolanoscom228_lab5 to javafx.fxml;
+    exports com.example.fabianbolanoscom228_lab5;
 }
