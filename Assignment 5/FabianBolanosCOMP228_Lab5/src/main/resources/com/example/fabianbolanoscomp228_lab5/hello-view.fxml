@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.GridPane?>
-
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
-
-
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+
+
 <GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-          fx:controller="com.example.fabianbolanoscom228_lab5.HelloController"
+          fx:controller="com.example.fabianbolanoscomp228_lab5.HelloController"
           alignment="CENTER" style="-fx-padding: 20;">
 
   <!-- Set Column Constraints -->
@@ -30,30 +31,30 @@
          wrapText="true" style=" -fx-padding: 10;" />
   <Label fx:id="LabelPlayerID" text="Player ID*:" GridPane.rowIndex="1" GridPane.columnIndex="0"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelFirstName" text="First Name*:" GridPane.rowIndex="2" GridPane.columnIndex="0"
+  <Label fx:id="LabelFirstName" text="First Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelLastName" text="Last Name*:" GridPane.rowIndex="3" GridPane.columnIndex="0"
+  <Label fx:id="LabelLastName" text="Last Name:" GridPane.rowIndex="3" GridPane.columnIndex="0"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelAddress" text="Address*:" GridPane.rowIndex="4" GridPane.columnIndex="0"
+  <Label fx:id="LabelAddress" text="Address:" GridPane.rowIndex="4" GridPane.columnIndex="0"
          style="-fx-padding: 10;" />
-  <Label fx:id="LabelPostalCode" text="Postal Code*:" GridPane.rowIndex="5" GridPane.columnIndex="0"
+  <Label fx:id="LabelPostalCode" text="Postal Code:" GridPane.rowIndex="5" GridPane.columnIndex="0"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelProvidence" text="Providence*:" GridPane.rowIndex="6" GridPane.columnIndex="0"
+  <Label fx:id="LabelProvidence" text="Providence:" GridPane.rowIndex="6" GridPane.columnIndex="0"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelPhoneNumber" text="PhoneNumber*:" GridPane.rowIndex="7" GridPane.columnIndex="0"
+  <Label fx:id="LabelPhoneNumber" text="PhoneNumber:" GridPane.rowIndex="7" GridPane.columnIndex="0"
          style=" -fx-padding: 10;" />
 
   <Label fx:id="LabelGame" text="GAME INFORMATION:" GridPane.rowIndex="0" GridPane.columnIndex="3" GridPane.columnSpan="2"
          wrapText="true" style=" -fx-padding: 10;" />
   <Label fx:id="LabelGameID" text="Game ID*:" GridPane.rowIndex="1" GridPane.columnIndex="3"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelGameTitle" text="Game Title*:" GridPane.rowIndex="2" GridPane.columnIndex="3"
+  <Label fx:id="LabelGameTitle" text="Game Title:" GridPane.rowIndex="2" GridPane.columnIndex="3"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelDate" text="Date*:" GridPane.rowIndex="3" GridPane.columnIndex="3"
+  <Label fx:id="LabelDate" text="Date:" GridPane.rowIndex="3" GridPane.columnIndex="3"
          style=" -fx-padding: 10;" />
-  <Label fx:id="LabelScore" text="Score*:" GridPane.rowIndex="4" GridPane.columnIndex="3"
+  <Label fx:id="LabelScore" text="Score:" GridPane.rowIndex="4" GridPane.columnIndex="3"
          style=" -fx-padding: 10;" />
-  <Label fx:id="Games" text="Player's game*:" GridPane.rowIndex="9" GridPane.columnIndex="0"
+  <Label fx:id="Games" text="Player's game:" GridPane.rowIndex="9" GridPane.columnIndex="0"
          style=" -fx-padding: 10;" />
 
 
@@ -85,11 +86,22 @@
           GridPane.columnSpan="2" GridPane.halignment="CENTER" onAction="#OnEditButtonClick" />
 
 
-  <ListView fx:id="GameList"
-            GridPane.rowIndex="10" GridPane.rowSpan="3"
-            GridPane.columnIndex="0" GridPane.columnSpan="5"
-            GridPane.vgrow="ALWAYS"
-            prefHeight="200" prefWidth="150"/>
+  <TableView fx:id="playerGameTable"
+             GridPane.rowIndex="10" GridPane.rowSpan="3"
+             GridPane.columnIndex="0" GridPane.columnSpan="5"
+             GridPane.vgrow="ALWAYS"
+             prefHeight="200" prefWidth="600">
+    <columns>
+      <TableColumn fx:id="playerIDColumn" text="Player ID"/>
+      <TableColumn fx:id="firstNameColumn" text="First Name"/>
+      <TableColumn fx:id="lastNameColumn" text="Last Name"/>
+      <TableColumn fx:id="gameIDColumn" text="Game ID"/>
+      <TableColumn fx:id="gameTitleColumn" text="Game Title"/>
+      <TableColumn fx:id="scoreColumn" text="Score"/>
+      <TableColumn fx:id="dateColumn" text="Date"/>
+    </columns>
+  </TableView>
+
 
 </GridPane>
 
